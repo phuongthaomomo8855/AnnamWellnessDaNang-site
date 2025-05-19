@@ -18,22 +18,25 @@ const HomeContactSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
-          className="h-[400px] md:h-full w-full rounded-lg overflow-hidden shadow-xl border border-border/30"
+          className="h-[400px] md:h-full w-full rounded-lg overflow-hidden shadow-xl border border-border/30 flex flex-col items-center justify-center bg-white"
         >
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.001520897026!2d108.24152707490153!3d16.06511483960631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142177a74ae9ac5%3A0xfa149f45959a6993!2zNSBWw7UgTmd1ecOqbiBHaS preschoolersAywgQuG6r2MgUGjDuiBN4bu5LCBOZ8WpIEjDoG5oIFPGoW4sIMSQw6AgTuG6tW5nLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1715930096977!5m2!1svi!2s"
-            width="100%"
-            height="100%"
-            style={{ border:0 }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Annam Wellness Da Nang Location - 5 Vo Nguyen Giap"
-          ></iframe>
+          <img
+            src="https://i.postimg.cc/MK1P2Tg6/mapmap-m6-LZeb-QRMVf40-Bo1.webp"
+            alt="Annam Map"
+            className="object-cover w-full h-full"
+          />
+          <a
+            href="https://maps.google.com/?q=5+Vo+Nguyen+Giap,+Ngu+Hanh+Son,+Da+Nang"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-3 text-primary text-sm hover:underline"
+          >
+            📍 Getting Directions with Google Maps
+          </a>
         </motion.div>
       </div>
     </SectionWrapper>
   );
-}
+};
 
 export default HomeContactSection;

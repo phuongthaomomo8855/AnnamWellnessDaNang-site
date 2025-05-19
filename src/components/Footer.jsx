@@ -5,7 +5,7 @@ import { navConfig } from "@/components/Navbar/navConfig.jsx";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const { footerNav } = navConfig; 
+  const { footerNav } = navConfig;
 
   const socialLinks = [
     { icon: <Facebook className="w-5 h-5" />, href: "https://facebook.com", label: "Facebook" },
@@ -42,11 +42,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 md:gap-12 mb-10 md:mb-12">
           <div className="lg:col-span-2">
             <Link to="/" className="inline-block mb-5">
-              <img  
-                src="https://i.postimg.cc/3Nxp41Y1/annam-logo-no-bg.png" 
-                alt="Annam Wellness Da Nang Logo" 
-                className="h-14" 
-               />
+              <img
+                src="https://i.postimg.cc/3Nxp41Y1/annam-logo-no-bg.png"
+                alt="Annam Wellness Da Nang Logo"
+                className="h-14"
+              />
             </Link>
             <p className="text-muted-foreground mb-3.5 leading-relaxed max-w-md">
               Annam Wellness Da Nang is a sanctuary for holistic wellbeing, blending ancient Vietnamese traditions with contemporary wellness wisdom.
@@ -64,12 +64,15 @@ const Footer = () => {
                 <Mail className="w-4 h-4 mr-2.5 text-primary" />
                 <span>reservations@annamwellness.com</span>
               </p>
-               <p className="flex items-center">
+              <p className="flex items-center">
                 <Clock className="w-4 h-4 mr-2.5 text-primary" />
                 <span>Check-in: 14:00 PM | Check-out: 12:00 PM</span>
               </p>
+
+            
             </div>
           </div>
+
           {footerNav && renderNavLinks("Discover", footerNav.discover)}
           {footerNav && renderNavLinks("About", footerNav.about)}
           {footerNav && renderNavLinks("Support", footerNav.support)}
