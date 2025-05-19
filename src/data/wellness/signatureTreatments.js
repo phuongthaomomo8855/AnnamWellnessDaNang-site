@@ -1,0 +1,93 @@
+export const signatureTreatments = [
+  {
+    id: "st001",
+    title: "Vietnamese Jade & Pearl Radiance Facial",
+    subTitle: "Ancient Royal Beauty Ritual",
+    description: "Experience the luxury of ancient Vietnamese royalty with this exquisite facial. Using finely ground jade and pearl powder, known for their purifying and brightening properties, this treatment revitalizes your skin, leaving it luminous and smooth. Includes a gentle massage with essential oils.",
+    duration: "75 minutes",
+    price: "Starting from 2,200,000 VND",
+    image: "https://i.postimg.cc/fWppQ1LK/crystal-therapy.jpg",
+    category: "Signature Treatments",
+    benefits: ["Brightens complexion", "Reduces fine lines", "Improves skin texture", "Deeply relaxing"],
+    keyIngredients: ["Jade Powder", "Pearl Powder", "Lotus Extract", "Essential Oils"],
+    bestFor: "All skin types, especially dull or tired skin"
+  },
+  {
+    id: "st002",
+    title: "Annam Signature Herbal Compress Massage (Bamboo Revival Deep Tissue Massage)",
+    subTitle: "Traditional Detoxifying & Deep Tissue Therapy",
+    description: "This traditional therapy combines the healing powers of a warm herbal compress with a soothing, deep tissue bamboo massage. The compress, filled with Vietnamese herbs, relieves muscle tension and improves circulation, while bamboo tools work deeper into muscle layers for profound release.",
+    duration: "90 minutes",
+    price: "Starting from 2,800,000 VND",
+    image: "https://i.postimg.cc/85360ptL/bambbb-A3-Q2-M7-XJa7-SDDv-Kn.jpg",
+    category: "Signature Treatments",
+    benefits: ["Relieves deep muscle soreness", "Boosts circulation", "Reduces inflammation", "Promotes detoxification", "Improves flexibility"],
+    keyIngredients: ["Lemongrass", "Ginger", "Turmeric", "Camphor", "Tamarind Leaves", "Bamboo Tools"],
+    bestFor: "Chronic muscle aches, stress relief, detoxification, athletes"
+  },
+  {
+    id: "st003",
+    title: "Son Tra Forest Meditation & Stillness",
+    subTitle: "Nature's Embrace for Inner Peace",
+    description: "Meditation in Sơn Trà Forest fosters inner stillness, accompanied by soothing natural sounds and ocean views. Connect deeply with nature and yourself in this guided session designed to calm the mind and rejuvenate the spirit.",
+    duration: "60 minutes",
+    price: "Starting from 1,500,000 VND",
+    image: "https://i.postimg.cc/05Ddr4nZ/son-tra-peninsula-da-nang-summit.webp",
+    category: "Signature Treatments",
+    benefits: ["Reduces stress and anxiety", "Enhances mental clarity", "Promotes deep relaxation", "Connects with nature"],
+    keyIngredients: ["Guided Meditation", "Natural Ambiance", "Mindfulness Techniques"],
+    bestFor: "Stress relief, mental clarity, nature lovers"
+  },
+  {
+    id: "st004",
+    title: "Volcanic Clay Detox Body Wrap",
+    subTitle: "Purifying & Mineralizing Treatment",
+    description: "A deeply cleansing body wrap using mineral-rich volcanic clay to draw out impurities, exfoliate dead skin cells, and nourish the skin. This treatment helps to improve skin tone and texture, leaving you feeling refreshed and revitalized.",
+    duration: "90 minutes",
+    price: "Starting from 2,600,000 VND",
+    image: "https://i.postimg.cc/pdscG64K/DETOX-BODY-WRAP-768x768.jpg",
+    category: "Signature Treatments",
+    benefits: ["Detoxifies the body", "Exfoliates and softens skin", "Improves skin clarity", "Rich in minerals"],
+    keyIngredients: ["Volcanic Clay", "Aloe Vera", "Essential Oils"],
+    bestFor: "All skin types, detoxification, skin purification"
+  },
+  {
+    id: "st005",
+    title: "Annam Hydrotherapy Journey",
+    subTitle: "Water-Based Rejuvenation",
+    description: "Experience the therapeutic benefits of water with our signature hydrotherapy journey. This multi-sensory experience includes an aromatic steam bath, a Vichy shower massage, and a soak in a mineral-rich hydro-jet tub, promoting circulation and deep relaxation.",
+    duration: "100 minutes",
+    price: "Starting from 3,200,000 VND",
+    image: "https://i.postimg.cc/pdWz91m5/airair3-A0xl8ja-QE3-C0-DLWA-1.jpg",
+    category: "Signature Treatments",
+    benefits: ["Improves circulation", "Relieves muscle tension", "Hydrates skin", "Reduces stress"],
+    keyIngredients: ["Mineral Salts", "Essential Oils", "Herbal Infusions"],
+    bestFor: "Stress relief, muscle recovery, overall rejuvenation"
+  },
+  {
+    id: "st006",
+    title: "Traditional Vietnamese Herbal Rejuvenation",
+    subTitle: "Ancient Wisdom for Modern Wellness",
+    description: "This holistic treatment draws on centuries of Vietnamese herbal wisdom. It includes a gentle herbal body scrub, a nourishing herbal body mask, and a Shirodhara-inspired warm oil head massage to calm the mind and rejuvenate the body.",
+    duration: "120 minutes",
+    price: "Starting from 3,500,000 VND",
+    image: "https://i.postimg.cc/gJRRXwVr/What_is_the_procedure_of_Shirodhara_20241026.webp",
+    category: "Signature Treatments",
+    benefits: ["Deeply relaxing and calming", "Nourishes skin and hair", "Balances energy", "Promotes mental clarity"],
+    keyIngredients: ["Traditional Vietnamese Herbs", "Warm Sesame Oil", "Natural Clays"],
+    bestFor: "Stress, anxiety, mental fatigue, holistic well-being"
+  },
+  {
+    id: "st007",
+    title: "Digital Detox & Emotional Healing Retreat",
+    subTitle: "Reconnect and Restore Authenticity",
+    description: "Immersive technology-free retreats incorporating sound healing rituals (Tibetan bowls), mindful breathing workshops, and introspective spa therapies to support emotional release and authentic reconnection. A journey to unplug and rediscover your inner self.",
+    duration: "Customizable (e.g., 3 hours, half-day, full-day)",
+    price: "Starting from 3,000,000 VND",
+    image: "https://i.postimg.cc/7Lj0Z1Tp/thien-thien-AR0LR38VlDFGLvok.webp",
+    category: "Signature Treatments",
+    benefits: ["Reduces digital fatigue", "Supports emotional release", "Enhances self-awareness", "Promotes authentic connection"],
+    keyIngredients: ["Sound Healing (Tibetan Bowls)", "Mindful Breathing", "Introspective Spa Therapies", "Guided Journaling"],
+    bestFor: "Digital overload, emotional balance, seeking deeper self-connection"
+  }
+];

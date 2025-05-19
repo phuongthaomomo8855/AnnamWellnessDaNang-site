@@ -1,0 +1,204 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 33% 95%; /* #f0e9e4 */
+    --foreground: 220 10% 15%;
+
+    --card: 30 33% 98%; /* Slightly lighter than background for depth */
+    --card-foreground: 220 10% 15%;
+
+    --popover: 30 33% 100%; /* Can be white or very light version of background */
+    --popover-foreground: 220 10% 15%;
+
+    --primary: 35 50% 45%; /* Nâu đất đậm hơn */
+    --primary-foreground: 40 50% 98%; 
+    --primary-dark: 35 50% 35%; 
+
+
+    --secondary: 145 63% 49%;  /* Xanh lá mòng (teal/mint) */
+    --secondary-foreground: 145 63% 95%; 
+    --secondary-dark: 145 63% 39%; 
+
+    --muted: 30 33% 92%; /* Darker shade of background */
+    --muted-foreground: 220 10% 45%; 
+
+    --accent: 0 60% 50%; 
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 55%; 
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 25% 88%; /* Adjusted for new background */
+    --input: 30 25% 90%; /* Adjusted for new background */
+    --ring: 145 63% 59%; /* Ring color based on new secondary */
+
+    --radius: 0.3rem; 
+
+    --heading-foreground: 220 10% 25%; 
+    --paragraph-foreground: 220 10% 35%; 
+    
+    --gradient-gold-start: 45 80% 60%;
+    --gradient-gold-end: 35 70% 45%;
+    
+    /* New gradient for buttons: Xanh lá mòng và Nâu đất */
+    --gradient-green-brown-start: 145 50% 45%; /* Xanh lá mòng */
+    --gradient-green-brown-end: 35 45% 40%;   /* Nâu đất */
+    --gradient-green-brown-hover-start: 145 50% 35%;
+    --gradient-green-brown-hover-end: 35 45% 30%;
+
+    --ivory-noise-light: 45, 30%, 98%;
+    --ivory-noise-dark: 40, 25%, 92%;
+  }
+
+  .dark {
+    
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background;
+    color: hsl(var(--paragraph-foreground));
+    font-family: 'Lato', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+    color: hsl(var(--heading-foreground));
+    font-family: 'Libre Baskerville', serif;
+  }
+
+  h1 { @apply text-4xl md:text-5xl font-bold mb-6; }
+  h2 { @apply text-3xl md:text-4xl font-semibold mb-5; }
+  h3 { @apply text-2xl md:text-3xl font-semibold mb-4; }
+  h4 { @apply text-xl md:text-2xl font-medium mb-3; }
+  h5 { @apply text-lg md:text-xl font-medium mb-2; }
+  h6 { @apply text-base md:text-lg font-medium mb-1; }
+
+  p {
+    @apply mb-4 leading-relaxed text-sm md:text-base;
+  }
+  
+  a {
+    @apply text-primary hover:text-primary-dark transition-colors duration-200;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-10 md:py-16;
+  }
+  
+  .text-gradient-gold {
+    @apply bg-gradient-to-r from-[hsl(var(--gradient-gold-start))] to-[hsl(var(--gradient-gold-end))] text-transparent bg-clip-text;
+  }
+  .text-gradient-teal { /* Kept for other uses if any */
+     @apply bg-gradient-to-r from-[hsl(var(--secondary))] to-[hsl(var(--secondary-dark))] text-transparent bg-clip-text;
+  }
+   .text-gradient-gold-teal {
+    @apply bg-gradient-to-br from-[hsl(var(--gradient-gold-start))] via-[hsl(var(--secondary))] to-[hsl(var(--gradient-gold-end))] text-transparent bg-clip-text;
+  }
+
+  .bg-gradient-button { /* This is the new green-brown gradient */
+    @apply bg-gradient-to-br from-[hsl(var(--gradient-green-brown-start))] to-[hsl(var(--gradient-green-brown-end))] hover:from-[hsl(var(--gradient-green-brown-hover-start))] hover:to-[hsl(var(--gradient-green-brown-hover-end))] transition-all duration-300 ease-in-out;
+  }
+  .bg-gradient-button-accent { /* Kept for other uses, can be updated if needed */
+    @apply bg-gradient-to-br from-accent to-primary hover:from-red-700 hover:to-primary-dark transition-all duration-300 ease-in-out;
+  }
+  
+  .text-shadow-soft {
+     text-shadow: 0 1px 2px rgba(0,0,0,0.07);
+  }
+  .text-shadow-on-dark-bg {
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  }
+
+  .decorative-line {
+    @apply w-20 h-px mx-auto bg-gradient-to-r from-transparent via-primary/40 to-transparent;
+  }
+  .decorative-line-teal {
+    @apply w-20 h-px mx-auto bg-gradient-to-r from-transparent via-secondary/40 to-transparent;
+  }
+
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-md border border-border/40 shadow-lg rounded-lg transition-all duration-300;
+  }
+  .glass-card-hover {
+    @apply hover:bg-card/90 hover:shadow-xl hover:scale-[1.015];
+  }
+
+  .glass-card-professional {
+    @apply bg-white/75 dark:bg-slate-900/75 backdrop-blur-lg border border-slate-300/40 dark:border-slate-700/40 shadow-lg rounded-lg transition-all duration-300;
+  }
+  .hover-lift {
+     @apply hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 ease-out;
+  }
+
+  .ivory-noise-pattern {
+    background-image: radial-gradient(hsl(var(--ivory-noise-light)) 0.5px, hsl(var(--ivory-noise-dark)) 0.5px);
+    background-size: 10px 10px;
+  }
+  
+  .button-glow-effect {
+    position: relative;
+    overflow: hidden;
+  }
+  .button-glow-effect::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250%; /* Increased size for more spread */
+    height: 250%; /* Increased size for more spread */
+    /* Updated gradient to match new button colors - using secondary (green) as the glow base */
+    background: radial-gradient(circle, hsla(var(--secondary), 0.25) 0%, transparent 35%, transparent 100%);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.5s ease-out; /* Smoother transition */
+    opacity: 0;
+    pointer-events: none; 
+    z-index: 0; 
+  }
+  .button-glow-effect:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  .button-glow-effect > * { /* Ensure button content is above glow */
+    position: relative; 
+    z-index: 1; 
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--background) / 0.3);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb {
+  /* Using the new green for scrollbar thumb */
+  background: hsl(var(--secondary) / 0.6); 
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--secondary) / 0.8);
+}
+
+* {
+  scrollbar-width: thin;
+  /* Using the new green for scrollbar thumb */
+  scrollbar-color: hsl(var(--secondary) / 0.6) hsl(var(--background) / 0.3);
+}
